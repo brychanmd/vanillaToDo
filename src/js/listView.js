@@ -1,6 +1,4 @@
-import list from './list';
-
-export default class inbox extends list {
+export default class ListView {
   /**
    *
    * @param {string} date

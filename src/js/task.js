@@ -1,4 +1,4 @@
-export default class task {
+export default class Task {
   constructor(name, date) {
     this.name = name;
     this.date = date;
@@ -6,20 +6,20 @@ export default class task {
     this.categories = [];
   }
 
-  set name(name) {
-    this.name = name;
+  set name(newName) {
+    this._name = newName;
   }
 
   get name() {
-    return this.name;
+    return this._name;
   }
 
-  set date(date) {
-    this.date = date;
+  set date(newDate) {
+    this._date = newDate;
   }
 
   get date() {
-    return this.date;
+    return this._date;
   }
 
   toggleCompleted() {

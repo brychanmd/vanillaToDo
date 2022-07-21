@@ -1,7 +1,10 @@
-export default class list {
-  constructor(name) {
+export default class TaskList {
+  constructor() {
     this.tasks = [];
-    this.name = name;
+  }
+
+  getTasks() {
+    return this.tasks;
   }
 
   addTask(task) {
@@ -9,7 +12,7 @@ export default class list {
   }
 
   removeTask(task) {
-    let index = this.categories.indexOf(task);
+    let index = this.tasks.indexOf(task);
     this.tasks.splice(index, 1);
   }
 }
