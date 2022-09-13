@@ -1,0 +1,52 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color;
+  color: $font-light;
+  border-top: 2px solid $font-light;
+  border-right: 2px solid $font-light;
+
+  padding: 1rem 2rem;
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0px;
+  }
+
+  &__title {
+    font-weight: 900;
+    text-decoration: underline;
+  }
+
+  &__item {
+    // test
+    font-size: 1.25em;
+    margin-top: 4px;
+    padding: 2px 4px;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &.active {
+      background-color: $font-light;
+      color: $font-dark;
+    }
+
+    &:hover {
+      background-color: $font-light;
+      color: $font-dark;
+    }
+  }
+
+  &__group {
+    hr {
+      width: 100%;
+      background-color: $bg-light;
+      border: 1px solid;
+    }
+
+    &--end {
+      margin-top: auto;
+    }
+  }
+}

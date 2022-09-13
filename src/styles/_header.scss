@@ -1,0 +1,39 @@
+#header-wrapper {
+  color: $font-light;
+  min-height: 4rem;
+  display: flex;
+  justify-content: center;
+
+  .menu {
+    padding: 1rem 2rem;
+    flex: 0 0 20vw;
+
+    .hamburger {
+      padding: 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+
+      i {
+        color: $font-light;
+        font-size: 34px;
+      }
+    }
+  }
+
+  .title {
+    flex: 1 1 auto;
+
+    padding: 1rem 2rem;
+
+    h1 {
+      margin: 0;
+    }
+    // display: flex;
+    // justify-content: center;
+  }
+
+  .closeIcon {
+    display: none;
+  }
+}

@@ -2,16 +2,34 @@ html {
   font-size: $font-size;
   font-family: $font-family;
   background: $background-color;
-  color: $font-color;
+  color: $font-dark;
   line-height: 1.4;
+
+  height: 100%;
 }
 
 body {
-  margin: auto;
-  text-align: center;
-  max-width: $page-width;
-}
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
 
-h1 {
-  margin: 0 0 2rem;
+  #main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    @media only screen and (min-width: 460px) {
+      flex-direction: row;
+    }
+
+    #sidebar-wrapper {
+      flex: 0 0 20vw;
+    }
+
+    #content-wrapper {
+      flex: 1;
+      order: 1;
+    }
+  }
 }
