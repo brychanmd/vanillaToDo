@@ -36,6 +36,11 @@
       background-color: $font-light;
       color: $font-dark;
     }
+
+    a {
+      text-decoration: inherit;
+      color: inherit;
+    }
   }
 
   &__group {

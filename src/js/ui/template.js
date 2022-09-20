@@ -48,17 +48,56 @@ const HTML = `
           New task
         </li>
         <li class="sidebar__item">
+          <a href="https://www.github.com/brychanmd">
           <i class="material-icons">link</i>
           Visit my GitHub
+          </a>
         </li>
       </ul>
     </div>
   </aside>
   <div id="content-wrapper">
-    <h2>Main content</h2>
-    <p>
-      Lorem ipsum dolor sit amut, canis rufus doggus woofus.
-    </p>
+    <div class="view-header">
+      <h2 class="content-title">Inbox</h2>
+      <p>Lorem ipsum dolor sit amut, canis rufus doggus woofus.  Project deadline will be at this time.  It is vitally important to the continuing prosperity of my illustrious career.</p>
+    </div>
+    <div class="view-cards">
+
+    <div class="card priority-high">
+      <div class="card__header">
+
+        <h3 class="card__title">My first task</h3>
+          
+        <div class="buttons">
+          <span>12 Jun</span>
+          <button><span class="align-middle">Details </span><i class="material-icons align-middle">keyboard_arrow_down</i></button>
+          <button> <i class="material-icons">edit</i></button>
+          <button> <i class="material-icons">delete</i></button>
+        </div>
+      </div>
+      <div class="card__description card__description--open">
+        <p>Lorem ipsum dolor sit amut canis rufus doggus woofus</p>
+      </div>
+    </div>
+
+    <div class="card priority-low">
+      <div class="card__header">
+
+        <h3 class="card__title">My second task</h3>
+          
+        <div class="buttons">
+          <span>12 Jun</span>
+          <button>Details <i class="material-icons">keyboard_arrow_down</i></button>
+          <button> <i class="material-icons">edit</i></button>
+          <button> <i class="material-icons">delete</i></button>
+        </div>
+      </div>
+      <div class="card__description card__description--open">
+        <p>Lorem ipsum dolor sit amut canis rufus doggus woofus</p>
+      </div>
+    </div>
+
+    </div>
   </div>
 </div>
 `;

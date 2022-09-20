@@ -5,3 +5,60 @@
   background-color: $bg-dark;
   color: $font-light;
 }
+
+.card {
+  color: $font-dark;
+  background-color: $bg-light;
+  border-left: 10px solid grey;
+  margin-bottom: 1rem;
+  padding-left: 5px;
+
+  &.priority-high {
+    border-color: rgb(244, 89, 89);
+  }
+  &.priority-med {
+    border-color: rgb(254, 204, 0);
+  }
+  &.priority-low {
+    border-color: rgb(59, 186, 55);
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .buttons {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      text-align: center;
+      font-size: 1rem;
+
+      i {
+        font-size: 1rem;
+      }
+
+      * {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &__title {
+    margin: 5px;
+  }
+
+  &__description {
+    margin: 5px;
+  }
+
+  button {
+    background: none;
+    color: inherit;
+    border: 2px solid $bg-dark;
+    padding: 2px 4px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+}
