@@ -50,7 +50,13 @@
   }
 
   &__description {
+    display: none;
     margin: 5px;
+    padding-bottom: 1px;
+
+    &.expanded {
+      display: block;
+    }
   }
 
   button {

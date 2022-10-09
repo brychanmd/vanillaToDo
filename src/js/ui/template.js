@@ -75,7 +75,7 @@ const HTML = `
           <button> <i class="material-icons">delete</i></button>
         </div>
       </div>
-      <div class="card__description card__description--open">
+      <div class="card__description">
         <p>Lorem ipsum dolor sit amut canis rufus doggus woofus</p>
       </div>
     </div>
@@ -92,7 +92,7 @@ const HTML = `
           <button> <i class="material-icons">delete</i></button>
         </div>
       </div>
-      <div class="card__description card__description--open">
+      <div class="card__description expanded">
         <p>Lorem ipsum dolor sit amut canis rufus doggus woofus</p>
       </div>
     </div>
