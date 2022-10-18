@@ -56,7 +56,7 @@ const HTML = `
       </ul>
     </div>
   </aside>
-  <div id="content-wrapper">
+  <div id="project-1" class="content-wrapper">
     <div class="view-header">
       <h2 class="content-title">Inbox</h2>
       <p>Lorem ipsum dolor sit amut, canis rufus doggus woofus.  Project deadline will be at this time.  It is vitally important to the continuing prosperity of my illustrious career.</p>
@@ -100,6 +100,32 @@ const HTML = `
     </div>
   </div>
 </div>
+<div class="mform mform__outer" id="new-project-form">
+    <div class="mform__overlay"></div>
+    <div class="mform__inner">
+      <div class="mform__col">
+        <h2>Create new project</h2>
+        <i class="material-icons mform__close">close</i>
+      </div>
+      <form>
+        <div class="mform__row">
+          <label for="new-proj-title" class="mform__label">Title</label>
+          <input id="new-proj-title" type="text" name="title" class="mform__input-field" value="" autocorrect="off" required />
+        </div>
+        
+        <div class="mform__row">
+          <label for="new-proj-description" class="mform__label">Description</label>
+          <textarea id="new-proj-description" type="textarea" name="description" class="mform__input-field" />
+
+          </textarea>
+        </div>
+
+        <div class="mform__row">
+          <button class="mform__button" type="submit">Submit</button> 
+        </div>
+      </form>
+    </div>
+  </div>
 `;
 
 export default HTML;

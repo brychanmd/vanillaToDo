@@ -32,4 +32,61 @@ body {
       order: 1;
     }
   }
+
+  .mform {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: rgba(0, 0, 0, 0.7);
+
+    &__inner {
+      flex-grow: 1;
+      max-width: 500px;
+
+      padding: 1rem;
+
+      color: $font-light;
+      background-color: $bg-dark;
+      border: 2px solid $bg-light;
+    }
+
+    &__row {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem 0;
+      padding-top: 0.5rem;
+    }
+
+    &__col {
+      display: flex;
+      justify-content: space-between;
+
+      i {
+        cursor: pointer;
+      }
+
+      h2 {
+        margin: 0;
+      }
+    }
+
+    &__button {
+      color: $font-dark;
+      background-color: $bg-light;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+    }
+
+    &.hidden {
+      display: none;
+    }
+  }
 }
