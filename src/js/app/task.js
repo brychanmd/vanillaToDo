@@ -1,9 +1,10 @@
 export default class Task {
-  constructor(name, date) {
+  constructor(id, name, date) {
+    this.id = id;
     this.name = name;
     this.date = date;
     this.completed = false;
-    this.categories = [];
+    this.project = null;
   }
 
   set name(newName) {
@@ -22,16 +23,15 @@ export default class Task {
     return this._date;
   }
 
+  set project(projectId) {
+    this._project = projectId;
+  }
+
+  get project() {
+    return this._project;
+  }
+
   toggleCompleted() {
     this.completed = !this.completed;
   }
-
-  // addCategory(cat) {
-  //   this.categories.push(cat);
-  // }
-
-  // removeCategory(cat) {
-  //   let index = this.categories.indexOf(cat);
-  //   this.categories.splice(index, 1);
-  // }
 }

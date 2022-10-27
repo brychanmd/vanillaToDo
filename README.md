@@ -1,9 +1,3 @@
-# 📦 webpack Boilerplate
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-
-Sensible webpack 5 boilerplate using Babel, PostCSS and Sass.
-
 ## Installation
 
 Clone this repo and npm install.
@@ -90,8 +84,4 @@ cd dist && http-server
 
 ## Author
 
-- [Tania Rascia](https://www.taniarascia.com)
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+- [Brychan Morris-Dafydd](https://www.brychan.cymru)

@@ -13,9 +13,7 @@ const HTML = `
         
         <div class="mform__row">
           <label for="new-proj-description" class="mform__label">Description</label>
-          <textarea id="new-proj-description" type="textarea" name="description" class="mform__input-field" />
-
-          </textarea>
+          <textarea id="new-proj-description" type="textarea" name="description" class="mform__input-field" rows="4" /></textarea>
         </div>
 
         <div class="mform__row">

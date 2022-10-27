@@ -1,3 +1,5 @@
+import form from './views/project-form';
+
 const HTML = `
 <header id="header-wrapper">
     <div class="menu">
@@ -102,4 +104,4 @@ const HTML = `
 </div>
 `;
 
-export default HTML;
+export default HTML + form;

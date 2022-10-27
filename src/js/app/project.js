@@ -1,3 +1,7 @@
-import List from './taskList';
-
-export default class Project {}
+export default class Project {
+  constructor(id, name, description) {
+    this.id = id;
+    this.name = name;
+    this.description = description;
+  }
+}

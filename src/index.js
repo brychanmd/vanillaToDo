@@ -1,6 +1,11 @@
 // My modules.
 import TaskList from '@/js/app/taskList';
-import ListView from '@/js/app/listView';
+
+import LocalStorage from './js/app/storage';
+
+const storage = new LocalStorage();
+let myvar = storage.loadData();
+console.log(myvar);
 
 // Helper modules.
 
@@ -22,7 +27,6 @@ if (false) {
   let number = 0;
 
   const taskList = new TaskList();
-  const listView = new ListView();
 
   const logTasks = () => {
     console.log(taskList.tasks);
