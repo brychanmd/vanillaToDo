@@ -18,7 +18,7 @@ import Task from './js/app/task';
 import { addDays } from 'date-fns';
 
 // UI things.
-import htmltemplate from '@/js/ui/template';
+import initialize from './js/ui';
 
 const app = document.querySelector('#root');
 
@@ -77,5 +77,5 @@ if (false) {
 
 /** UI */
 if (true) {
-  app.innerHTML = htmltemplate;
+  initialize();
 }
