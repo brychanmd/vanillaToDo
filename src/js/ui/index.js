@@ -1,13 +1,8 @@
 // initialize everything here.
-import scaffolding from 'js/ui/templates/scaffolding';
-import * as taskUi from 'js/ui/actions/task';
+import * as scaffoldingUi from 'js/ui/actions/scaffolding';
 
 function initialize() {
-  const app = document.querySelector('#root');
-  app.innerHTML = scaffolding;
-
-  taskUi.renderNewTaskForm();
-  taskUi.destroyNewTaskForm();
+  scaffoldingUi.renderScaffolding();
 }
 
 export default initialize;

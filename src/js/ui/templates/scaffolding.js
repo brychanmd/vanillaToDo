@@ -1,7 +1,7 @@
 const HTML = `
 <header id="header-wrapper">
     <div class="menu">
-      <button class="hamburger">
+      <button id="menu-button" class="hamburger">
         <i class="menuIcon material-icons">menu</i>
         <i class="closeIcon material-icons">close</i>
       </button>
@@ -39,16 +39,16 @@ const HTML = `
     <div class="sidebar__group sidebar__group--end">
     <hr>
       <ul id="project-list">
-        <li class="sidebar__item active">
+        <li id="new-project-button" class="sidebar__item active">
           <i class="material-icons">create_new_folder</i>
           New project
         </li>
-        <li class="sidebar__item">
+        <li id="new-task-button" class="sidebar__item">
           <i class="material-icons">add_box</i>
           New task
         </li>
         <li class="sidebar__item">
-          <a href="https://www.github.com/brychanmd">
+          <a href="https://www.github.com/brychanmd" target="_blank">
           <i class="material-icons">link</i>
           Visit my GitHub
           </a>
