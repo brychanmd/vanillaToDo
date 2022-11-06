@@ -3,7 +3,7 @@ const HTML = `
     <div class="mform__inner">
       <div class="mform__col">
         <h2>Create new project</h2>
-        <i class="material-icons mform__close">close</i>
+        <i class="close-button material-icons mform__close">close</i>
       </div>
       <form>
         <div class="mform__row">
@@ -17,7 +17,7 @@ const HTML = `
         </div>
 
         <div class="mform__row">
-          <button class="mform__button" type="submit">Submit</button> 
+          <button class="submit-button mform__button" type="submit">Submit</button> 
         </div>
       </form>
     </div>

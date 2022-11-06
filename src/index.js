@@ -1,10 +1,9 @@
 // My modules.
 import TaskList from '@/js/app/taskList';
 
-import LocalStorage from './js/app/storage';
+import Storage from './js/app/storage';
 
-const storage = new LocalStorage();
-let myvar = storage.loadData();
+let myvar = Storage.loadData();
 console.log(myvar);
 
 // Helper modules.

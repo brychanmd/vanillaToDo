@@ -1,6 +1,8 @@
+import Storage from './storage';
+
 export default class Project {
-  constructor(id, name, description) {
-    this.id = id;
+  constructor(name, description) {
+    this.id = Storage.createId();
     this.name = name;
     this.description = description;
   }

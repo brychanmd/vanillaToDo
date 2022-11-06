@@ -1,4 +1,4 @@
-export default class LocalStorage {
+class Storage {
   constructor() {
     this.data = this.loadData();
   }
@@ -55,6 +55,7 @@ export default class LocalStorage {
    */
   removeProject(project) {
     this.data.projects.splice(this.findIndexById('project', project.ID), 1);
+    this.saveData();
   }
 
   /**
@@ -63,6 +64,7 @@ export default class LocalStorage {
    */
   addProject(project) {
     this.data.projects.push(project);
+    this.saveData();
   }
 
   /**
@@ -71,6 +73,7 @@ export default class LocalStorage {
    */
   removeTask(task) {
     this.data.tasks.splice(this.findIndexById('task', task.ID), 1);
+    this.saveData();
   }
 
   /**
@@ -79,10 +82,13 @@ export default class LocalStorage {
    */
   addTask(task) {
     this.data.tasks.push(task);
+    this.saveData();
   }
 
   createId() {
-    this.incrementor++;
-    return this.incrementor;
+    this.data.incrementor++;
+    return this.data.incrementor;
   }
 }
+
+export default new Storage();
