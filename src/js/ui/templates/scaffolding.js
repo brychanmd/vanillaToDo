@@ -13,17 +13,17 @@ const HTML = `
 <div id="main">
   <aside class="sidebar" id="sidebar-wrapper">
     <div class="sidebar__group">
-    <span class="sidebar__title">Inboxes</span>
+      <span class="sidebar__title">Inboxes</span>
       <ul id="inbox-list">
-        <li class="sidebar__item active">
+        <li id="listlink-inbox" class="sidebar__item active">
           <i class="material-icons">all_inbox</i>
           All
         </li>
-        <li class="sidebar__item">
+        <li id="listlink-upcoming" class="sidebar__item">
           <i class="material-icons">upcoming</i>
           Upcoming
         </li>
-        <li class="sidebar__item">
+        <li id="listlink-overdue" class="sidebar__item">
           <i class="material-icons">event_busy</i>
           Overdue
         </li>
@@ -32,13 +32,11 @@ const HTML = `
     <div class="sidebar__group">
       <span class="sidebar__title">Projects</span>
       <ul id="project-list">
-        <li class="sidebar__item active">My new project</li>
-        <li class="sidebar__item">Another project</li>
       </ul>
     </div>
     <div class="sidebar__group sidebar__group--end">
     <hr>
-      <ul id="project-list">
+      <ul id="links-list">
         <li id="new-project-button" class="sidebar__item active">
           <i class="material-icons">create_new_folder</i>
           New project

@@ -1,4 +1,4 @@
-const template = (project) => {
+export const view = (project) => {
   return `<div id="project-${project.id}" class="content-wrapper">
   <div class="view-header">
     <h2 class="content-title">${project.title}</h2>
@@ -9,4 +9,6 @@ const template = (project) => {
 </div>`;
 };
 
-export default template;
+export const listLink = (project, active = false) => {
+  `<li class="sidebar__item${active ?? ' active'}" data-id="${project.id}">${project.title}</li>`;
+};
