@@ -1,4 +1,4 @@
-.content-wrapper {
+#content-wrapper {
   padding: 1rem 2rem;
   border-top: 2px solid $font-light;
 
@@ -16,7 +16,7 @@
   &.priority-high {
     border-color: rgb(244, 89, 89);
   }
-  &.priority-med {
+  &.priority-medium {
     border-color: rgb(254, 204, 0);
   }
   &.priority-low {

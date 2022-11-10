@@ -1,9 +1,9 @@
 const template = (task) => {
   return `
-  <div id="task-${task.id}" class="card priority-high">
+  <div id="task-${task.id}" class="card priority-${task.priority}">
       <div class="card__header">
 
-        <h3 class="card__title">${task.title}</h3>
+        <h3 class="card__title">${task.name}</h3>
           
         <div class="buttons">
           <span>${task.date}</span>

@@ -3,7 +3,7 @@ export const view = (type) => {
   <div class="view-header">
     <h2 class="content-title">${type}</h2>
   </div>
-  <div class="view-cards">
+  <div id="view-cards">
   </div>
 </div>`;
 };

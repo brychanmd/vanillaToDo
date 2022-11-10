@@ -31,6 +31,15 @@ const HTML = `
         </div>
 
         <div class="mform__row">
+          <label for="new-task-priority" class="mform__label">Priority</label>
+          <select id="new-task-priority" type="priority" name="project" class="mform__input-field">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+        </div>
+
+        <div class="mform__row">
           <button class="submit-button mform__button" type="submit">Submit</button> 
         </div>
       </form>

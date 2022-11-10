@@ -54,48 +54,50 @@ const HTML = `
       </ul>
     </div>
   </aside>
-  <div id="project-1" class="content-wrapper">
-    <div class="view-header">
-      <h2 class="content-title">Inbox</h2>
-      <p>Lorem ipsum dolor sit amut, canis rufus doggus woofus.  Project deadline will be at this time.  It is vitally important to the continuing prosperity of my illustrious career.</p>
-    </div>
-    <div class="view-cards">
+  <div id="content-wrapper">
+    <div id="project-1">
+      <div class="view-header">
+        <h2 class="content-title">Inbox</h2>
+        <p>Lorem ipsum dolor sit amut, canis rufus doggus woofus.  Project deadline will be at this time.  It is vitally important to the continuing prosperity of my illustrious career.</p>
+      </div>
+      <div id="view-cards">
 
-    <div class="card priority-high">
-      <div class="card__header">
+        <div class="card priority-high">
+          <div class="card__header">
 
-        <h3 class="card__title">My first task</h3>
-          
-        <div class="buttons">
-          <span>12 Jun</span>
-          <button><span class="align-middle">Details </span><i class="material-icons align-middle">keyboard_arrow_down</i></button>
-          <button> <i class="material-icons">edit</i></button>
-          <button> <i class="material-icons">delete</i></button>
+            <h3 class="card__title">My first task</h3>
+              
+            <div class="buttons">
+              <span>12 Jun</span>
+              <button><span class="align-middle">Details </span><i class="material-icons align-middle">keyboard_arrow_down</i></button>
+              <button> <i class="material-icons">edit</i></button>
+              <button> <i class="material-icons">delete</i></button>
+            </div>
+          </div>
+          <div class="card__description">
+            <p>Lorem ipsum dolor sit amut canis rufus doggus woofus</p>
+          </div>
         </div>
-      </div>
-      <div class="card__description">
-        <p>Lorem ipsum dolor sit amut canis rufus doggus woofus</p>
-      </div>
-    </div>
 
-    <div class="card priority-low">
-      <div class="card__header">
+        <div class="card priority-low">
+          <div class="card__header">
 
-        <h3 class="card__title">My second task</h3>
-          
-        <div class="buttons">
-          <span>12 Jun</span>
-          <button>Details <i class="material-icons">keyboard_arrow_down</i></button>
-          <button> <i class="material-icons">edit</i></button>
-          <button> <i class="material-icons">delete</i></button>
+            <h3 class="card__title">My second task</h3>
+              
+            <div class="buttons">
+              <span>12 Jun</span>
+              <button>Details <i class="material-icons">keyboard_arrow_down</i></button>
+              <button> <i class="material-icons">edit</i></button>
+              <button> <i class="material-icons">delete</i></button>
+            </div>
+          </div>
+          <div class="card__description expanded">
+            <p>Lorem ipsum dolor sit amut canis rufus doggus woofus</p>
+          </div>
         </div>
-      </div>
-      <div class="card__description expanded">
-        <p>Lorem ipsum dolor sit amut canis rufus doggus woofus</p>
-      </div>
-    </div>
 
-    </div>
+      </div>
+    <div>
   </div>
 </div>
 `;

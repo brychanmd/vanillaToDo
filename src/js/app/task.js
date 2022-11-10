@@ -9,32 +9,31 @@ export default class Task {
     this.description = description;
     this.project = project;
     this.completed = false;
-    this.project = null;
   }
 
-  set name(newName) {
-    this._name = newName;
-  }
+  // set name(newName) {
+  //   this.name = newName;
+  // }
 
-  get name() {
-    return this._name;
-  }
+  // get name() {
+  //   return this.name;
+  // }
 
-  set date(newDate) {
-    this._date = newDate;
-  }
+  // set date(newDate) {
+  //   this._date = newDate;
+  // }
 
-  get date() {
-    return this._date;
-  }
+  // get date() {
+  //   return this._date;
+  // }
 
-  set project(projectId) {
-    this._project = projectId;
-  }
+  // set project(projectId) {
+  //   this._project = projectId;
+  // }
 
-  get project() {
-    return this._project;
-  }
+  // get project() {
+  //   return this._project;
+  // }
 
   toggleCompleted() {
     this.completed = !this.completed;

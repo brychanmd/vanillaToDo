@@ -1,4 +1,6 @@
 import { view, link } from 'js/ui/templates/listview';
+import card from 'js/ui/templates/task';
+import storage from '@/js/app/storage';
 
 // UI actions related to the main list views.
 export function renderMenuLinks() {
@@ -9,14 +11,17 @@ export function renderMenuLinks() {
       let type = elem.getAttribute('data-type');
       switch (type) {
         case 'all':
+          console.log('All inbox clicked');
           renderAll();
           break;
 
         case 'upcoming':
+          console.log('Upcoming inbox clicked');
           renderUpcoming();
           break;
 
         case 'overdue':
+          console.log('Overdue inbox clicked');
           renderOverdue();
           break;
 
@@ -31,6 +36,17 @@ export function renderMenuLinks() {
 // Render 'all' inbox
 export function renderAll() {
   // something
+  document.getElementById('content-wrapper').innerHTML = view('All');
+  const cardsDiv = document.getElementById('view-cards');
+  const tasks = storage.loadData().tasks;
+
+  console.log(tasks);
+
+  tasks.forEach((task) => {
+    cardsDiv.insertAdjacentHTML('beforeend', card(task));
+  });
+
+  // then add event listeners to cards.
 }
 
 // Render 'upcoming'
