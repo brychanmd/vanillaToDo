@@ -1,5 +1,5 @@
 // My modules.
-import TaskList from '@/js/app/taskList';
+import TaskList from '@/js/app/listView';
 
 import Storage from './js/app/storage';
 

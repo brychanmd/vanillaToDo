@@ -1,6 +1,7 @@
 import { view, link } from 'js/ui/templates/listview';
 import card from 'js/ui/templates/task';
 import storage from '@/js/app/storage';
+import TaskList from '@/js/app/listView';
 
 // UI actions related to the main list views.
 export function renderMenuLinks() {
@@ -35,6 +36,7 @@ export function renderMenuLinks() {
 
 // Render 'all' inbox
 export function renderAll() {
+  const inbox = new TaskList('all');
   // something
   document.getElementById('content-wrapper').innerHTML = view('All');
   const cardsDiv = document.getElementById('view-cards');

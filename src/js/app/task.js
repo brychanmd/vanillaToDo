@@ -11,30 +11,6 @@ export default class Task {
     this.completed = false;
   }
 
-  // set name(newName) {
-  //   this.name = newName;
-  // }
-
-  // get name() {
-  //   return this.name;
-  // }
-
-  // set date(newDate) {
-  //   this._date = newDate;
-  // }
-
-  // get date() {
-  //   return this._date;
-  // }
-
-  // set project(projectId) {
-  //   this._project = projectId;
-  // }
-
-  // get project() {
-  //   return this._project;
-  // }
-
   toggleCompleted() {
     this.completed = !this.completed;
   }

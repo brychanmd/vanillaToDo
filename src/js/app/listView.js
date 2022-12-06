@@ -1,22 +1,33 @@
 import { compareAsc, compareDesc, format, isAfter, isBefore, endOfToday } from 'date-fns';
 import Task from './task';
+import Storage from './storage';
+import { view, link } from 'js/ui/templates/listview';
 
 export default class TaskList {
-  constructor() {
-    this.tasks = [];
+  constructor(id) {
+    this.id = id;
+    this.tasks = this.updateTasklist();
   }
 
-  getTasks() {
-    return this.tasks;
+  updateTasklist() {
+    this.tasks = this.filterTasks(Storage.loadData().tasks);
   }
 
-  addTask(task) {
-    this.tasks.push(task);
-  }
+  renderView() {
+    this.updateTasklist();
 
-  removeTask(task) {
-    let index = this.tasks.indexOf(task);
-    this.tasks.splice(index, 1);
+    const view = view(this.id);
+    const cardsDiv = view.getElementById('view-cards');
+
+    const tasks = this.tasks;
+
+    console.log(tasks);
+
+    this.tasks.forEach((task) => {
+      cardsDiv.insertAdjacentHTML('beforeend', card(task));
+    });
+
+    return view;
   }
 
   /**
@@ -24,7 +35,7 @@ export default class TaskList {
    * @param {Array<Task>} tasks
    * @param {string} method
    */
-  filterTasks(tasks, method) {
+  filterTasks(tasks, method = this.id) {
     switch (method) {
       case 'upcoming':
         return tasks.filter((task) => {
@@ -35,6 +46,9 @@ export default class TaskList {
         return tasks.filter((task) => {
           return isBefore(task.date, endOfToday());
         });
+
+      case 'all':
+        return tasks;
 
       default:
         throw 'Invalid filter method';
