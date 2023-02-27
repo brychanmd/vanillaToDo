@@ -6,6 +6,8 @@ import Storage from 'js/app/storage';
 import Task from 'js/app/task';
 import Project from 'js/app/project';
 
+import {parse as fnsParse} from 'date-fns';
+
 export function renderScaffolding() {
   document.querySelector('#root').innerHTML = scaffoldingHtml;
   scaffoldingEvents();
@@ -53,15 +55,17 @@ function newTaskFormEvents() {
   const form = document.querySelector('#new-task-form');
   form.querySelector('.submit-button').addEventListener('click', (e) => {
     e.preventDefault();
-
+    
     const title = form.querySelector('#new-task-title').value;
     const date = form.querySelector('#new-task-date').value;
     const priority = form.querySelector('#new-task-priority').value;
     const description = form.querySelector('#new-task-description').value;
     const project = form.querySelector('#new-task-project').value;
 
+    const parsedDate = fnsParse(date, 'yyyy-mm-dd', new Date());
+
     // I need to pass the above data to localstorage.
-    Storage.addTask(new Task(title, date, priority, description, project));
+    Storage.addTask(new Task(title, parsedDate, priority, description, project));
     destroyNewTaskForm();
   });
 }

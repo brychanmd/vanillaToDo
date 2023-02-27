@@ -1,3 +1,10 @@
+import {format as fnsFormat} from "date-fns";
+
+/**
+ * 
+ * @param {Task} task 
+ * @returns {String} Some HTML
+ */
 const template = (task) => {
   return `
   <div id="task-${task.id}" class="card priority-${task.priority}">
@@ -6,7 +13,7 @@ const template = (task) => {
         <h3 class="card__title">${task.name}</h3>
           
         <div class="buttons">
-          <span>${task.date}</span>
+          <span>${task.getFormattedDate()}</span>
           <button><span class="align-middle">Details </span><i class="material-icons align-middle">keyboard_arrow_down</i></button>
           <button> <i class="material-icons">edit</i></button>
           <button> <i class="material-icons">delete</i></button>

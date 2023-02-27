@@ -1,5 +1,7 @@
-import { view, link } from 'js/ui/templates/listview';
-import card from 'js/ui/templates/task';
+import { compareAsc, compareDesc, format, isAfter, isBefore, endOfToday } from 'date-fns';
+
+import { view, link } from '@/js/ui/templates/listview';
+import card from '@/js/ui/templates/task';
 import storage from '@/js/app/storage';
 import TaskList from '@/js/app/listView';
 
@@ -7,6 +9,7 @@ import TaskList from '@/js/app/listView';
 export function renderMenuLinks() {
   document.getElementById('inbox-list').innerHTML =
     link('All', 'all_inbox', true) + link('Upcoming', 'upcoming') + link('Overdue', 'event_busy');
+
   document.querySelectorAll('.listlink').forEach((elem) => {
     elem.addEventListener('click', () => {
       let type = elem.getAttribute('data-type');
@@ -51,12 +54,28 @@ export function renderAll() {
   // then add event listeners to cards.
 }
 
-// Render 'upcoming'
+// Render 'upcoming' inbox
 export function renderUpcoming() {
+  const inbox = new TaskList('upcoming');
   // something
+  document.getElementById('content-wrapper').innerHTML = view('Upcoming');
+  const cardsDiv = document.getElementById('view-cards');
+  const tasks = storage.loadData().tasks;
+
+  tasks.forEach((task) => {
+
+
+    // use the date-fns library to check if the task is upcoming, if it is, add it to the cardsDiv.  
+    if (isAfter(task.date, Date.now())) {
+      cardsDiv.insertAdjacentHTML('beforeend', card(task));
+    }
+
+  });
+
+  // then add event listeners to cards.
 }
 
-// Render 'Overdue'
+// Render 'Overdue' inbox
 export function renderOverdue() {
-  // something
+  
 }
